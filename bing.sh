@@ -12,10 +12,13 @@ case $1 in
 		if [[ -f $HOME/Pictures/Wallpapers/bing/us/$dates.jpg ]]; then
 			echo "This image currently exist."
 			echo "Do you want remove this picture? (y,n) "
+			echo "**if enter (n) change background to this picture"
 			read removethis
 			if [[ $removethis == "y" ]]; then
 				rm $HOME/Pictures/Wallpapers/bing/us/$dates.jpg
 				getpic
+			elif [[ $removethis == "n" ]]; then
+				gsettings set org.gnome.desktop.background picture-uri file://$HOME/Pictures/Wallpapers/bing/us/$dates.jpg
 			fi
 		else
 			getpic
@@ -33,10 +36,13 @@ case $1 in
 		if [[ -f $HOME/Pictures/Wallpapers/bing/ir/$dates.jpg ]]; then
 			echo "This image currently exist."
 			echo "Do you want remove this picture? (y,n) "
+			echo "**if enter (n) change background to this picture"
 			read removethis
 			if [[ $removethis == "y" ]]; then
 				rm $HOME/Pictures/Wallpapers/bing/ir/$dates.jpg
 				getpic
+			elif [[ $removethis == "n" ]]; then
+				gsettings set org.gnome.desktop.background picture-uri file://$HOME/Pictures/Wallpapers/bing/ir/$dates.jpg
 			fi
 		else
 			getpic
@@ -54,10 +60,13 @@ case $1 in
 		if [[ -f $HOME/Pictures/Wallpapers/bing/gb/$dates.jpg ]]; then
 			echo "This image currently exist."
 			echo "Do you want remove this picture? (y,n) "
+			echo "**if enter (n) change background to this picture"
 			read removethis
 			if [[ $removethis == "y" ]]; then
 				rm $HOME/Pictures/Wallpapers/bing/gb/$dates.jpg
 				getpic
+			elif [[ $removethis == "n" ]]; then
+				gsettings set org.gnome.desktop.background picture-uri file://$HOME/Pictures/Wallpapers/bing/gb/$dates.jpg
 			fi
 		else
 			getpic
